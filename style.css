@@ -5,28 +5,36 @@
   box-sizing: border-box;
 }
 
-body,
 html {
   height: 100%;
   font-family: "JetBrains Mono", "Fira Code", "Segoe UI", "Inter", sans-serif,
     monospace;
   background-color: #000;
   color: #f4f4f4;
-  overflow: hidden;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
 }
 
 /* Ana Düzen */
 .container {
   display: flex;
   flex-direction: row;
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 /* Sol (Fotoğraf) Alan */
 .left {
   width: 50%;
-  position: relative;
+  height: 100vh;
+  position: sticky;
+  top: 0;
   overflow: hidden;
 }
 
@@ -40,13 +48,11 @@ html {
 /* Sağ (İçerik) Alan */
 .right {
   width: 50%;
-  overflow-y: auto;
   padding: 3rem 4rem;
   scroll-behavior: smooth;
   background: #000;
 }
 
-/* Bölüm Aralığı */
 section {
   margin-bottom: 3.5rem;
 }
@@ -88,7 +94,7 @@ section {
   background: #ccc;
 }
 
-/* Genel Kart Stili */
+/* Kartlar */
 .card {
   background: #111;
   padding: 1rem 1.2rem;
@@ -170,34 +176,26 @@ footer {
 @media (max-width: 1024px) {
   .right {
     padding: 2rem 2rem;
-    overflow-y: auto;
   }
 }
 
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    height: auto;
   }
 
   .left,
   .right {
     width: 100%;
-    overflow-y: auto;
   }
 
   .left {
     height: 300px;
-  }
-
-  .left img {
-    height: 100%;
-    width: 100%;
+    position: relative;
   }
 
   .right {
     padding: 2rem 1.5rem;
-    overflow-y: visible;
   }
 
   .intro h1 {
@@ -223,6 +221,10 @@ footer {
 
   .intro h2 {
     font-size: 1.1rem;
+  }
+
+  .intro p {
+    font-size: 0.95rem;
   }
 
   .socials a {
