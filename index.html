@@ -3,65 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Halil Hattab | Yazılımcı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Halil Hattab | Full Stack Developer</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
-      <h1>Halil Hattab</h1>
-      <p>Full Stack Geliştirici | Öğrenci | Hayalperest</p>
-    </header>
-
-    <nav>
-      <ul>
-        <li><a href="#about">Hakkımda</a></li>
-        <li><a href="#projects">Projeler</a></li>
-        <li><a href="#contact">İletişim</a></li>
-      </ul>
-    </nav>
-
-    <section id="about">
-      <h2>Hakkımda</h2>
-      <p>
-        Merhaba, ben Halil. Web geliştirme, siber güvenlik ve yapay zeka
-        alanlarında kendimi geliştiriyorum. Profesyonel yazılım çözümleri sunmak
-        için sürekli öğrenmeye ve üretmeye odaklanıyorum.
-      </p>
-    </section>
-
-    <section id="projects">
-      <h2>Projelerim</h2>
-      <div class="project-list">
-        <div class="project-card">
-          <h3>Chat Uygulaması</h3>
-          <p>Gerçek zamanlı mesajlaşma uygulaması (Node.js + WebSocket).</p>
-        </div>
-        <div class="project-card">
-          <h3>YÖS Hazırlık App</h3>
-          <p>React Native ile sınava yönelik uygulama.</p>
-        </div>
-        <div class="project-card">
-          <h3>Portföy Sitesi</h3>
-          <p>Bu sayfa! HTML, CSS ve JS ile sıfırdan tasarlandı.</p>
-        </div>
+    <div class="container">
+      <div class="left">
+        <img src="assets/halil.png" alt="Halil Hattab" />
       </div>
-    </section>
 
-    <section id="contact">
-      <h2>İletişim</h2>
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Ad Soyad" required />
-        <input type="email" name="email" placeholder="E-Posta" required />
-        <textarea name="message" placeholder="Mesajınız" required></textarea>
-        <button type="submit">Gönder</button>
-      </form>
-      <p class="form-status"></p>
-    </section>
+      <div class="right">
+        <section class="intro">
+          <h1>Halil Hattab</h1>
+          <h2>Full Stack Developer</h2>
+          <p>
+            React • React Native • Node.js • Next.js • WordPress • Firebase •
+            MySQL • Linux • AI
+          </p>
+          <div class="socials">
+            <a href="https://github.com/trs-1342" target="_blank">GitHub</a>
+            <a
+              href="https://www.linkedin.com/in/halil-hattab-b961b127a/"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://instagram.com/hhattabh" target="_blank"
+              >Instagram</a
+            >
+          </div>
+        </section>
 
-    <footer>
-      <p>&copy; 2025 Halil Hattab. Tüm Hakları Saklıdır.</p>
-    </footer>
+        <section id="projelerim">
+          <h2>🧩 Projelerim</h2>
+          <br />
+          <div class="accordion">
+            <div class="card">
+              <button class="toggle">Chat Uygulaması ⯈</button>
+              <div class="content">
+                Node.js ve WebSocket kullanarak gerçek zamanlı, oturum sistemli,
+                profil fotoğraflı bir mesajlaşma uygulaması geliştirdik. Her
+                kullanıcıya özel kimliklendirme ile mesajlar canlı olarak
+                güncelleniyor.
+              </div>
+            </div>
 
-    <script src="script.js"></script>
+            <div class="card">
+              <button class="toggle">Teknik Servis Takip Sistemi ⯈</button>
+              <div class="content">
+                MySQL veritabanı, Express.js backend ve Excel çıktısı ile
+                çalışan, cihaz kabul, onarım ve teslim süreçlerini yöneten bir
+                uygulama geliştirildi. Filtreleme ve raporlama özellikleri
+                içeriyor.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">YÖS Mobil Uygulaması ⯈</button>
+              <div class="content">
+                React Native ve Firebase kullanılarak sınava hazırlık uygulaması
+                geliştirildi. Öğretmen ekleme, kayıt, giriş, dark/light tema,
+                kart sistemi gibi özellikler eklendi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">
+                Kullanıcı Kayıt ve Doğrulama Sistemi ⯈
+              </button>
+              <div class="content">
+                Email doğrulamalı, şifreyi SHA256 ile tek yönlü, diğer bilgileri
+                AES ile çift yönlü şifreleyen, Firebase Auth ve Firestore
+                temelli güvenli bir kullanıcı yönetim sistemi kuruldu.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Sevgili Kart Uygulaması ⯈</button>
+              <div class="content">
+                React Native ile offline ve Firebase bağlantılı versiyonları
+                olan, kullanıcıların kartlar ekleyip birbirine özel bilgiler
+                paylaşabildiği bir ilişki uygulaması geliştirildi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Notepad Uygulaması ⯈</button>
+              <div class="content">
+                C# ile geliştirilen, tüm masaüstülerde görülebilir, kısayolla
+                açılıp kapanabilen, kelime/satır/karakter sayacı içeren koyu
+                temalı bir not alma uygulaması.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Multiplayer Yılan Oyunu ⯈</button>
+              <div class="content">
+                Node.js, HTML, CSS, JavaScript ile geliştirilen, gerçek zamanlı
+                çok oyunculu, kullanıcı renk seçimi, skor ve zaman limiti
+                özellikli bir oyun.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">WordPress Tatlıcı Sitesi ⯈</button>
+              <div class="content">
+                Waffle ve pancake menüsü tanıtımlı, 'Hakkımızda', 'İletişim' ve
+                menü sayfaları bulunan profesyonel görünümlü bir WordPress web
+                sitesi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Restoran Sitesi ⯈</button>
+              <div class="content">
+                Menüye kek, meyve tabağı ve dondurma gibi yan ürünler eklenmiş,
+                modern kullanıcı arayüzü ile oluşturulmuş özel bir WordPress
+                yemek menüsü.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Arduino Katlar Arası Ses Sistemi ⯈</button>
+              <div class="content">
+                Birinci ve ikinci kat arasında butonla ses çalan, temel kablolu
+                bağlantı ile çalışan bir Arduino devresi tasarlandı.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Portföy Sayfası ⯈</button>
+              <div class="content">
+                Siyah-beyaz modern UI tasarımıyla hazırlanmış, sol tarafında
+                sabit görsel, sağda kaydırılabilir içerik bulunan, GitHub ve
+                LinkedIn entegrasyonlu HTML/CSS portföy sitesi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Web İçerik Yönetimi ⯈</button>
+              <div class="content">
+                Meta reklam raporlamaları, SEO optimizasyonu, içerik planları ve
+                dijital marka stratejileri geliştirildi. Instagram için planlı
+                gönderi üretimi yapıldı.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Cafe Fizibilite Raporu ⯈</button>
+              <div class="content">
+                Küçükçekmece’de bir cafe açma planı için gider, gelir, hedef
+                kitle ve lokasyon analizleriyle profesyonel fizibilite planı
+                çıkarıldı.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">
+                USB Dosya Sunucusu Router Entegrasyonu ⯈
+              </button>
+              <div class="content">
+                Router üzerinden takılı USB belleğe LAN ve WAN üzerinden erişim
+                sağlanmaya çalışıldı. Ağ paylaşımı, dosya izinleri ve güvenlik
+                yapılandırmaları test edildi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Linux Sistem Problemleri ⯈</button>
+              <div class="content">
+                Arch, Mint, Kali gibi sistemlerde paket kurulumu, GRUB hataları,
+                SFC/DISM taramaları, boot kaybı gibi sorunlara çözümler
+                geliştirildi.
+              </div>
+            </div>
+
+            <div class="card">
+              <button class="toggle">Defender ve Güvenlik Scriptleri ⯈</button>
+              <div class="content">
+                PowerShell ile Defender'ı kapatan gelişmiş komutlar yazıldı.
+                Script engellemelerine karşı agresif güvenlik bypass yöntemleri
+                test edildi.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>💼 Yetenekler</h2>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Python, C#, PHP</li>
+            <li>Bootstrap, JQuery</li>
+            <li>React, React Native, Next.js, Node.js, WordPress</li>
+            <li>Firebase, MySQL, Express.js</li>
+            <li>Linux, Portainer, SEO</li>
+            <li>WebSocket, Git</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>📬 İletişim</h2>
+          <p><strong>E-posta:</strong> hattab1342@gmail.com</p>
+          <p><strong>Konum:</strong> İstanbul</p>
+        </section>
+
+        <footer>
+          <p>&copy; 2025 TRS</p>
+        </footer>
+      </div>
+    </div>
+    <script>
+      const toggles = document.querySelectorAll(".toggle");
+      toggles.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const content = btn.nextElementSibling;
+          const isOpen = content.style.display === "block";
+          document
+            .querySelectorAll(".accordion .content")
+            .forEach((c) => (c.style.display = "none"));
+          document
+            .querySelectorAll(".accordion .toggle")
+            .forEach((t) => (t.innerHTML = t.innerHTML.replace("⯆", "⯈")));
+          if (!isOpen) {
+            content.style.display = "block";
+            btn.innerHTML = btn.innerHTML.replace("⯈", "⯆");
+          } else {
+            btn.innerHTML = btn.innerHTML.replace("⯆", "⯈");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
