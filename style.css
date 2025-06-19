@@ -170,6 +170,7 @@ footer {
 @media (max-width: 1024px) {
   .right {
     padding: 2rem 2rem;
+    overflow-y: auto;
   }
 }
 
@@ -182,6 +183,7 @@ footer {
   .left,
   .right {
     width: 100%;
+    overflow-y: auto;
   }
 
   .left {
