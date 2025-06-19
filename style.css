@@ -1,3 +1,4 @@
+/* Genel Temizlik */
 * {
   margin: 0;
   padding: 0;
@@ -7,19 +8,22 @@
 body,
 html {
   height: 100%;
-  /* font-family: "Segoe UI", "Inter", sans-serif; */
-  font-family: "JetBrains Mono", "Fira Code", "Segoe UI", "Inter", sans-serif, monospace;
+  font-family: "JetBrains Mono", "Fira Code", "Segoe UI", "Inter", sans-serif,
+    monospace;
   background-color: #000;
   color: #f4f4f4;
   overflow: hidden;
 }
 
+/* Ana Düzen */
 .container {
   display: flex;
+  flex-direction: row;
   height: 100vh;
   width: 100vw;
 }
 
+/* Sol (Fotoğraf) Alan */
 .left {
   width: 50%;
   position: relative;
@@ -33,6 +37,7 @@ html {
   object-position: center;
 }
 
+/* Sağ (İçerik) Alan */
 .right {
   width: 50%;
   overflow-y: auto;
@@ -41,46 +46,49 @@ html {
   background: #000;
 }
 
+/* Bölüm Aralığı */
 section {
   margin-bottom: 3.5rem;
 }
 
+/* Giriş */
 .intro h1 {
-  font-size: 3.2rem;
-  margin-bottom: 0.3rem;
+  font-size: 3rem;
+  margin-bottom: 0.4rem;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 .intro h2 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #aaa;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-weight: 500;
 }
 
 .intro p {
   font-size: 1.05rem;
-  margin-bottom: 1.8rem;
-  color: #ddd;
+  margin-bottom: 2rem;
+  color: #ccc;
 }
 
 .socials a {
   display: inline-block;
   margin-right: 1rem;
-  padding: 0.55rem 1.2rem;
-  background: #f4f4f4;
+  padding: 0.6rem 1.2rem;
+  background: #fff;
   color: #000;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: background 0.25s ease;
+  transition: background 0.3s ease;
 }
 
 .socials a:hover {
-  background: #cfcfcf;
+  background: #ccc;
 }
 
+/* Genel Kart Stili */
 .card {
   background: #111;
   padding: 1rem 1.2rem;
@@ -91,7 +99,7 @@ section {
 }
 
 .card:hover {
-  border-left: 4px solid #888;
+  border-left-color: #888;
 }
 
 ul {
@@ -112,6 +120,7 @@ footer {
   margin-top: 4rem;
 }
 
+/* Accordion */
 #projelerim {
   margin-top: 2rem;
 }
@@ -126,7 +135,7 @@ footer {
 }
 
 .accordion .card:hover {
-  border-left: 3px solid #888;
+  border-left-color: #888;
   background: #181818;
 }
 
@@ -155,4 +164,75 @@ footer {
   font-size: 0.95rem;
   line-height: 1.6;
   padding-left: 0.2rem;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 1024px) {
+  .right {
+    padding: 2rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    height: 300px;
+  }
+
+  .left img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .right {
+    padding: 2rem 1.5rem;
+    overflow-y: visible;
+  }
+
+  .intro h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .intro h2,
+  .intro p,
+  .socials {
+    text-align: center;
+  }
+
+  .socials a {
+    margin: 0.5rem 0.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro h2 {
+    font-size: 1.1rem;
+  }
+
+  .socials a {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .accordion .toggle {
+    font-size: 1rem;
+  }
+
+  .card {
+    padding: 0.8rem 1rem;
+  }
 }
