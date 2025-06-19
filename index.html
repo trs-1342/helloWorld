@@ -18,6 +18,7 @@
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <div class="custom-cursor"></div>
     <div class="container">
       <div class="left">
         <img src="assets/halil.png" alt="Halil Hattab" />
@@ -219,7 +220,11 @@
         </section>
 
         <footer>
-          <p>&copy; 2025 TRS</p>
+          <!-- <div class="voting-box">
+            <button id="likeBtn">👍 <span id="likeCount">0</span></button>
+            <button id="dislikeBtn">👎 <span id="dislikeCount">0</span></button>
+          </div> -->
+          <p>&copy; 2025 Halil Hattab. Tüm Hakları Saklıdır.</p>
         </footer>
       </div>
     </div>
@@ -242,6 +247,11 @@
             btn.innerHTML = btn.innerHTML.replace("⯆", "⯈");
           }
         });
+      });
+      const cursor = document.querySelector(".custom-cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
       });
     </script>
   </body>
